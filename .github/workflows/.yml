@@ -10,3 +10,4 @@ jobs:
     steps:
       - name: Ping your game logic URL
         run: curl -s https://nc-lotory.kesug.com/niyamitakelasa_browser_trigger.php
+
