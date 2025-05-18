@@ -1,14 +1,12 @@
-# .github/workflows/ping.yml
-name: Run PHP Script Every Minute
+name: Ping Game Logic Every Minute
 
 on:
   schedule:
-    - cron: '* * * * *'  # every 1 minute
-  workflow_dispatch:      # allows manual runs
+    - cron: '*/1 * * * *'   # Runs every 1 minute
 
 jobs:
-  ping_php:
+  ping-game:
     runs-on: ubuntu-latest
     steps:
-      - name: Call your PHP script
-        run: curl -s https://noisy-salad-aa5a.sparkos-com.workers.dev/
+      - name: Ping your game logic URL
+        run: curl -s https://nc-lotory.kesug.com/niyamitakelasa_browser_trigger.php
