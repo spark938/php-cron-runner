@@ -1,0 +1,12 @@
+name: Ping Game Logic Every Minute
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'   # Runs every 1 minute
+
+jobs:
+  ping-game:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping your game logic URL
+        run: curl -s https://nc-lotory.kesug.com/niyamitakelasa_browser_trigger.php
